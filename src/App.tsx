@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
+import { type } from 'os';
 
 function App() {
+
+  const [inputValue, setInputValue] = useState("")
+  const [todos, setTodos] = useState<Todo[]>([])
+
+  type Todo = {
+    inputValue: string;
+    id: number;
+    checked: boolean;
+  }
+
   return (
     <div className="App">
       <div>
